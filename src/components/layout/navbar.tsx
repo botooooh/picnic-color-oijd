@@ -51,7 +51,7 @@ export function Navbar() {
                 "text-sm font-medium transition-colors hover:text-primary relative group",
                 pathname === route.href || (pathname === "/" && route.href === "/#programme" && scrolled)
                   ? "text-primary"
-                  : "text-foreground/80"
+                  : scrolled ? "text-foreground/80 hover:text-primary" : "text-white/90 hover:text-white"
               )}
             >
               {route.label}
@@ -65,7 +65,7 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "md:hidden z-50")}>
+          <SheetTrigger className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "md:hidden z-50", !scrolled && "text-white hover:text-white/80 hover:bg-white/20")}>
             <Menu className="h-6 w-6" />
           </SheetTrigger>
           <SheetContent side="right" className="w-[300px] sm:w-[400px]">

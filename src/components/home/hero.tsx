@@ -12,7 +12,7 @@ export function Hero() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
-      <motion.div 
+      <motion.div
         style={{ y, opacity }}
         className="absolute inset-0 z-0"
       >
@@ -38,21 +38,12 @@ export function Hero() {
         >
           <img src="/images/picnic color logo.svg" alt="Picnic Color Logo" className="h-40 md:h-56 lg:h-80 mb-6 drop-shadow-2xl object-contain w-full px-4" />
         </motion.div>
-        
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-lg md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto font-medium"
-        >
-          Une journée. Une couleur. Une équipe. Des souvenirs inoubliables.
-        </motion.p>
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-16"
         >
           <Link href="/reserver" className={cn(buttonVariants({ variant: "default", size: "lg" }), "rounded-full text-lg h-14 px-8 w-full sm:w-auto shadow-xl hover:shadow-primary/25 transition-all")}>
             Réserver maintenant
@@ -62,21 +53,6 @@ export function Hero() {
           </Link>
         </motion.div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center"
-      >
-        <span className="text-white/60 text-sm mb-2 uppercase tracking-widest">Découvrir</span>
-        <motion.div 
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="w-1 h-12 bg-gradient-to-b from-primary to-transparent rounded-full"
-        />
-      </motion.div>
     </section>
   )
 }
