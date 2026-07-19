@@ -38,7 +38,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2 z-50">
-          <img src="/images/logo OIJD blanc.svg" alt="OIJD Logo" className="h-10 w-auto object-contain" />
+          <img src={scrolled ? "/images/logo OIJD.svg" : "/images/logo OIJD blanc.svg"} alt="OIJD Logo" className="h-10 w-auto object-contain transition-all" />
         </Link>
 
         {/* Desktop Menu */}
