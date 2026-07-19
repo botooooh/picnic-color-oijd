@@ -68,7 +68,7 @@ export function Navbar() {
           <SheetTrigger className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "md:hidden z-50", !scrolled && "text-white hover:text-white/80 hover:bg-white/20")}>
             <Menu className="h-6 w-6" />
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+          <SheetContent side="right" className="w-[300px] sm:w-[400px] p-8">
             <SheetTitle className="sr-only">Menu de navigation</SheetTitle>
             <nav className="flex flex-col gap-6 mt-12">
               {routes.map((route) => (
