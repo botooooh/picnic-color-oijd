@@ -34,10 +34,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex justify-center"
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight drop-shadow-lg">
-            PICNIC COLOR <span className="text-primary">2026</span>
-          </h1>
+          <img src="/images/picnic color logo.svg" alt="Picnic Color Logo" className="h-40 md:h-56 lg:h-80 mb-6 drop-shadow-2xl object-contain w-full px-4" />
         </motion.div>
         
         <motion.p 
