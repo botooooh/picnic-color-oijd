@@ -24,8 +24,8 @@ export default function PaiementPage() {
 
   if (!userData) return null
 
-  // Remplacer par le vrai numéro WhatsApp de l'affiche
-  const whatsappNumber = "2250000000000" 
+  // Numéro WhatsApp issu de l'affiche
+  const whatsappNumber = "2250767696465" 
   const whatsappMessage = `Bonjour, je viens d'effectuer le paiement pour le Picnic Color 2026. Voici mon reçu. Nom : ${userData.prenom} ${userData.nom}`
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
 
