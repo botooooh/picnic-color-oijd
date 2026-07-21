@@ -23,8 +23,8 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Contact</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>Email: contact@oijd.ci</li>
-              <li>Téléphone: +225 00 00 00 00 00</li>
+              <li>Email: oijdciv@gmail.com</li>
+              <li>Téléphone: +225 07 67 69 64 65</li>
               <li>Abidjan, Côte d'Ivoire</li>
             </ul>
           </div>
