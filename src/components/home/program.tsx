@@ -3,13 +3,14 @@
 import { motion } from "framer-motion"
 
 const schedule = [
-  { time: "09h00", title: "Accueil", description: "Arrivée des participants et vérification des billets." },
-  { time: "09h30", title: "Installation", description: "Mise en place par département et distribution des kits." },
-  { time: "10h00", title: "Jeux", description: "Début des activités ludiques et sportives." },
-  { time: "12h30", title: "Déjeuner", description: "Partage du grand repas Picnic Color." },
-  { time: "14h00", title: "Défis", description: "Compétitions entre départements pour remporter la coupe." },
-  { time: "16h00", title: "Photos", description: "Séance photo officielle avec la poudre de couleur." },
-  { time: "17h00", title: "Fin", description: "Clôture de l'événement et remerciements." },
+  { time: "09h00", title: "Accueil & installation", description: "Accueil, distribution des accessoires colorés et installation." },
+  { time: "10h00", title: "Cérémonie d'ouverture", description: "Mot de bienvenue, présentation des équipes et cris de guerre." },
+  { time: "10h30", title: "Color Team Building Challenge", description: "Parcours de confiance, Conseil de crise et jeux d'équipe." },
+  { time: "12h30", title: "Color Picnic", description: "Temps libre, pique-nique convivial, photobooth et espace détente." },
+  { time: "14h00", title: "Color Talent Show", description: "Chaque équipe présente un talent (danse, chant, sketch...)." },
+  { time: "15h00", title: "Grande Color Battle", description: "Activité collective explosive avec lancer de poudre colorée !" },
+  { time: "16h00", title: "Remise des prix", description: "Récompenses (équipe la plus drôle, créative, vainqueur du challenge...)." },
+  { time: "16h30", title: "Clôture", description: "Message de fin, grande photo collective et musique." },
 ]
 
 export function Program() {
