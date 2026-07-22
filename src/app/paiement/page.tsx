@@ -1,32 +1,13 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { useRouter } from "next/navigation"
 import { motion } from "framer-motion"
 import { AlertCircle, ArrowRight } from "lucide-react"
 
 export default function PaiementPage() {
-  const router = useRouter()
-  const [userData, setUserData] = useState<any>(null)
-
-  useEffect(() => {
-    const userId = localStorage.getItem("current_user_id")
-    if (!userId) {
-      router.push("/reserver")
-      return
-    }
-    const users = JSON.parse(localStorage.getItem("picnic_users") || "[]")
-    const user = users.find((u: any) => u.id === userId)
-    if (user) {
-      setUserData(user)
-    }
-  }, [router])
-
-  if (!userData) return null
 
   // Numéro WhatsApp issu de l'affiche
   const whatsappNumber = "2250767696465" 
-  const whatsappMessage = `Bonjour, je viens d'effectuer le paiement pour le Picnic Color 2026. Voici mon reçu. Nom : ${userData.prenom} ${userData.nom}`
+  const whatsappMessage = `Bonjour, je viens d'effectuer le paiement pour le Picnic Color 2026. Voici mon reçu. Mon nom et mon département sont : `
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
 
   return (

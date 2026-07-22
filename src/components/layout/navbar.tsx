@@ -58,7 +58,7 @@ export function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
             </Link>
           ))}
-          <Link href="/reserver" className={cn(buttonVariants({ variant: "default" }), "rounded-full shadow-lg hover:shadow-xl transition-all")}>
+          <Link href="/paiement" className={cn(buttonVariants({ variant: "default" }), "rounded-full shadow-lg hover:shadow-xl transition-all")}>
             Réserver maintenant
           </Link>
         </nav>
@@ -81,7 +81,7 @@ export function Navbar() {
                   {route.label}
                 </Link>
               ))}
-              <Link href="/reserver" onClick={() => setIsOpen(false)} className={cn(buttonVariants({ variant: "default" }), "mt-8 rounded-full h-12 text-lg")}>
+              <Link href="/paiement" onClick={() => setIsOpen(false)} className={cn(buttonVariants({ variant: "default" }), "mt-8 rounded-full h-12 text-lg")}>
                 Réserver maintenant
               </Link>
             </nav>

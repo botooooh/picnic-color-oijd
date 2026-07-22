@@ -45,7 +45,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 md:mt-16 w-full max-w-[280px] sm:max-w-none mx-auto"
         >
-          <Link href="/reserver" className={cn(buttonVariants({ variant: "default", size: "lg" }), "rounded-full text-base sm:text-lg h-12 sm:h-14 px-6 sm:px-8 w-full sm:w-auto shadow-xl hover:shadow-primary/25 transition-all")}>
+          <Link href="/paiement" className={cn(buttonVariants({ variant: "default", size: "lg" }), "rounded-full text-base sm:text-lg h-12 sm:h-14 px-6 sm:px-8 w-full sm:w-auto shadow-xl hover:shadow-primary/25 transition-all")}>
             Réserver maintenant
           </Link>
           <Link href="/tirage" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "rounded-full text-base sm:text-lg h-12 sm:h-14 px-6 sm:px-8 w-full sm:w-auto bg-white/10 text-white hover:bg-white/20 border-white/20 backdrop-blur-md")}>

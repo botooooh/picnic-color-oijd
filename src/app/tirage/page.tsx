@@ -137,7 +137,7 @@ export default function TiragePage() {
             transition={{ delay: departments.length * 0.2 + 1 }}
             className="mt-16"
           >
-            <Link href="/reserver" className={cn(buttonVariants({ variant: "default", size: "lg" }), "rounded-full px-8 shadow-xl")}>
+            <Link href="/paiement" className={cn(buttonVariants({ variant: "default", size: "lg" }), "rounded-full px-8 shadow-xl")}>
               Je connais ma couleur, je réserve !
             </Link>
           </motion.div>
