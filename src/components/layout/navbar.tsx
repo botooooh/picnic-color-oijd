@@ -14,6 +14,9 @@ export function Navbar() {
   const [scrolled, setScrolled] = React.useState(false)
   const [isOpen, setIsOpen] = React.useState(false)
   const pathname = usePathname()
+  
+  const isHome = pathname === "/"
+  const useTransparentStyle = isHome && !scrolled
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -33,12 +36,12 @@ export function Navbar() {
     <header
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        scrolled ? "bg-background/80 backdrop-blur-md border-b shadow-sm" : "bg-transparent"
+        useTransparentStyle ? "bg-transparent" : "bg-background/80 backdrop-blur-md border-b shadow-sm"
       )}
     >
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2 z-50">
-          <img src={scrolled ? "/images/logo OIJD.svg" : "/images/logo OIJD blanc.svg"} alt="OIJD Logo" className="h-10 w-auto object-contain transition-all" />
+          <img src={useTransparentStyle ? "/images/logo OIJD blanc.svg" : "/images/logo OIJD.svg"} alt="OIJD Logo" className="h-10 w-auto object-contain transition-all" />
         </Link>
 
         {/* Desktop Menu */}
@@ -51,7 +54,7 @@ export function Navbar() {
                 "text-sm font-medium transition-colors hover:text-primary relative group",
                 pathname === route.href || (pathname === "/" && route.href === "/#programme" && scrolled)
                   ? "text-primary"
-                  : scrolled ? "text-foreground/80 hover:text-primary" : "text-white/90 hover:text-white"
+                  : useTransparentStyle ? "text-white/90 hover:text-white" : "text-foreground/80 hover:text-primary"
               )}
             >
               {route.label}
@@ -65,7 +68,7 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "md:hidden z-50", !scrolled && "text-white hover:text-white/80 hover:bg-white/20")}>
+          <SheetTrigger className={cn(buttonVariants({ variant: "ghost", size: "icon" }), "md:hidden z-50", useTransparentStyle && "text-white hover:text-white/80 hover:bg-white/20")}>
             <Menu className="h-6 w-6" />
           </SheetTrigger>
           <SheetContent side="right" className="w-[300px] sm:w-[400px] p-8">
