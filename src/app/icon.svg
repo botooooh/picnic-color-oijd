@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="128" fill="#F8FAFC"/>
+  <!-- Couleurs du Picnic Color -->
+  <circle cx="256" cy="180" r="90" fill="#F43F5E"/> <!-- Rose/Rouge -->
+  <circle cx="170" cy="300" r="90" fill="#3B82F6"/> <!-- Bleu -->
+  <circle cx="342" cy="300" r="90" fill="#F59E0B"/> <!-- Orange/Jaune -->
+  <!-- Cercle de rassemblement -->
+  <path d="M 256 80 C 353.202 80 432 158.798 432 256 C 432 353.202 353.202 432 256 432 C 158.798 432 80 353.202 80 256 C 80 158.798 158.798 80 256 80 Z" stroke="#10B981" stroke-width="32" stroke-dasharray="40 20" stroke-linecap="round"/>
+</svg>
